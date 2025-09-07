@@ -1,0 +1,59 @@
+/* Slider Animations CSS */
+
+/* Zoom In and Out Animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Pan Image Animation */
+@keyframes panImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+/* Fade In and Out Animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Video Background Styling */
+.slider-video {
+    filter: brightness(0.7);
+}
+
+/* Image Background Styling */
+.slider-zoom-image,
+.slider-pan-image,
+.slider-fade-image {
+    filter: brightness(0.7);
+}
+
+/* Ensure the hero-single has proper positioning for overlays */
+.hero-single {
+    position: relative;
+}
+
+/* Ensure the hero-single::before has lower z-index than video/images */
+.hero-single::before {
+    z-index: -1 !important;
+}
